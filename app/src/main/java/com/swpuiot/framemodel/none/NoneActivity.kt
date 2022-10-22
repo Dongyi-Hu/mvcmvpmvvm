@@ -16,8 +16,11 @@ import kotlin.random.Random
 
 class NoneActivity : AppCompatActivity() {
 
+    /** 用户输入的查询账号 */
     private var etAccount: EditText? = null
+    /** 查询按钮 */
     private var btnSearch: Button? = null
+    /** 查询结果展示 */
     private var tvResult: TextView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -42,24 +45,39 @@ class NoneActivity : AppCompatActivity() {
 
     }
 
+    /**
+     * 初始化控件
+     */
     private fun initView() {
         etAccount = findViewById(R.id.et_account)
         btnSearch = findViewById(R.id.btn_search)
         tvResult = findViewById(R.id.tv_result)
     }
 
+    /**
+     * 获取用户输入内容
+     */
     private fun getUserInput() = etAccount?.text.toString()
 
+    /**
+     * 显示成功画面
+     */
     private fun showSuccessPage(account: Account) {
         tvResult?.visibility = View.VISIBLE
         tvResult?.text = "${account.name} | ${account.level}"
     }
 
+    /**
+     * 显示失败画面
+     */
     private fun showFailedPage() {
         tvResult?.visibility = View.VISIBLE
         tvResult?.text = "获取数据失败"
     }
 
+    /**
+     * 通过随机数模拟获取数据
+     */
     private fun getAccountData(accountName: String, callback: MCallback) {
         val isSuccess = Random.nextBoolean()
         if (isSuccess) {
