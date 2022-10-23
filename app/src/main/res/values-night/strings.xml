@@ -1,6 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">FrameModel</string>
     <string name="user_input">请输入查询账号</string>
     <string name="search">查询</string>
     <string name="search_result">查询结果...</string>
+    <string name="account_name_account_level">账号@{account.name}的等级为@{account.level}</string>
 </resources>
