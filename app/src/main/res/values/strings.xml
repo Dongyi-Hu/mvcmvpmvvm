@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">FrameModel</string>
+    <string name="search">查询</string>
+    <string name="search_account">请输入查询的账号</string>
+    <string name="search">查询</string>
+    <string name="show_result">显示结果</string>
 </resources>

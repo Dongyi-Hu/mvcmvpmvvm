@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FrameModel">
         <activity
+            android:name=".view.MvpActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
